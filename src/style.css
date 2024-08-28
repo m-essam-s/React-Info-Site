@@ -8,10 +8,13 @@ body {
 }
 
 .container {
-    position: relative;
+    position: absolute ;
     max-width: 600px;
-    margin: 100px auto;
-    border: #DEEBF8 1px solid;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
 
 }
 
