@@ -3,12 +3,17 @@ import './style.css'
 
 import Navbar from './components/Navbar'
 import Main from './components/Main'
+import { useState } from 'react'
 
-function App() {
+const App = () => {
+  const [darkMode, setDarkMode] = useState(false)
   return (
     <div className="container">
-      <Navbar />
-      <Main />
+      <Navbar
+        darkMode={darkMode}
+        toggleDarkMode={() => setDarkMode((prev) => !prev)}
+      />
+      <Main darkMode={darkMode} />
     </div>
   )
 }
